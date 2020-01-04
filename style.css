@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f7fe;
+    white-space: nowrap;
+}
+
+.wrapper {
+    min-height: 100%;
+    padding-bottom: -35px;
+}
+
+p, h1, h2 {
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+.image-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.image-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.our-pricing {
+    margin: 0 auto 1.5rem;
+    padding-top: 3rem;
+}
+
+.our-pricing h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: hsl(232, 13%, 33%);
+}
+
+.our-pricing .annual-monthly {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-pricing .switch {
+    margin: 0 1rem;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-image: linear-gradient(90deg, hsl(235, 71%, 73%),hsl(237, 52%, 56%));
+    border-radius: 30px;
+}
+
+.our-pricing .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.our-pricing .switch .slider {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    top: 3px;
+    left: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform .4s ease;
+}
+
+.our-pricing input:checked + .slider {
+    transform: translateX(24px);
+}
+
+.our-pricing p {
+    color: hsl(234, 14%, 74%);
+}
+
+.card-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, hsl(236, 56%, 68%),hsl(237, 52%, 56%));
+    color: hsl(240, 78%, 98%);
+    width: 36%;
+    height: 100%;
+    box-shadow: 0px 20px 40px -40px hsl(233, 13%, 49%);
+    z-index: 2;
+}
+
+.card:first-child, .card:last-child {
+    position: relative;
+    padding: 1rem 0rem;
+    background: hsl(240, 78%, 98%);
+    color: hsl(232, 13%, 33%);
+    width: 32%;
+    z-index: 1;
+}
+
+.card:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.card:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.card ul {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.card ul li {
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid hsla(240, 80%, 98%, 0.815);
+    padding: 1.1rem 0;
+    border-width: 0 0 1px 0;
+}
+
+.card:first-child ul li, .card:last-child ul li {
+    border: 1px solid hsl(234, 14%, 74%);
+    border-width: 0 0 1px 0;
+}
+
+.card ul li:first-child {
+    padding: 1.6rem 0;
+}
+
+.card ul li:last-child {
+    border-width: 0;
+}
+
+.card ul li h1 {
+    margin-top: 1rem;
+    font-size: 4rem;
+}
+
+.card ul li h1 .dollar {
+    display: inline-block;
+    position: relative;
+    margin-right: .25rem;
+    font-size: 2rem;
+    bottom: 10px;
+}
+
+.card button {
+    width: 100%;
+    padding: .9rem 0;
+    background-color: hsl(240, 78%, 98%);
+    border: 0;  
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 1rem 0;
+    color: hsl(237, 52%, 56%);
+}
+
+.card:first-child button, .card:last-child button {
+    background-image: linear-gradient(135deg, hsl(236, 56%, 68%),hsl(237, 52%, 56%));
+    color: #f7f7fe;
+}
+
+.hidden {
+    display: none;
+}
+
+.attribution {
+    height: 35px;
+}
+
+@media (max-width: 850px) {
+
+
+    .card-holder {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 375px;
+        min-width: 290px;
+        padding: 1.5rem 1.5rem;
+        margin: .5rem 0;
+    }
+
+    .card:first-child, .card:last-child {
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+} 
